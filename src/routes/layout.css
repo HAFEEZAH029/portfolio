@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+:root {
+	--color-primary: #00f0ff;
+	--color-secondary: #8b5cf6;
+	--color-tertiary: #fed639;
+
+	--color-bg: #020b0c;
+	--color-surface: #0b1416;
+	--color-surface-soft: #121b1e;
+	--color-text: #e5f7f8;
+	--color-muted: #7d8b8d;
+	--color-border: rgba(0, 240, 255, 0.18);
+
+	--font-heading: 'Space Grotesk', sans-serif;
+	--font-body: 'Geist', sans-serif;
+	--font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	background: var(--color-bg);
+	color: var(--color-text);
+	font-family: var(--font-body);
+}
+
+section {
+	scroll-margin-top: 6rem;
+}
+
+main {
+	padding-top: 4rem;
+	padding-bottom: 6rem;
+}
+
+@media (min-width: 1024px) {
+	main {
+		padding-bottom: 0;
+	}
+}
