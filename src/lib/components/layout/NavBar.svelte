@@ -21,11 +21,12 @@
       {/each}
     </div>
 
-    <button
-      type="button"
+    <a
+      href="#transmission"
+      aria-label="Jump to contact section"
       class="rounded-sm border border-cyan-300 bg-cyan-300 px-3 py-1 text-[0.65rem] md:text-[0.7rem] font-bold uppercase tracking-widest text-black transition hover:bg-violet-500/10 hover:border-cyan-300 hover:text-cyan-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 cursor-pointer"
     >
       Ctrl + K
-    </button>
+    </a>
   </nav>
 </header>
