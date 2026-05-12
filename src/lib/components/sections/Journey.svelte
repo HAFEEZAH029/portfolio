@@ -114,10 +114,9 @@
 		position: relative;
 		overflow: hidden;
 		min-height: 7.4rem;
-		border: 1px solid rgba(0, 240, 255, 0.13);
+		border: 1px solid var(--color-border);
 		background:
-			linear-gradient(135deg, rgba(0, 240, 255, 0.07), transparent 34%),
-			#10121d;
+			linear-gradient(135deg, rgba(0, 240, 255, 0.07), transparent 34%), var(--color-card-solid);
 		padding: clamp(0.95rem, 2.6vw, 1.35rem);
 		transition:
 			transform 260ms ease,
@@ -136,7 +135,7 @@
 
 	.phase-card:hover {
 		transform: translateY(-4px);
-		border-color: rgba(0, 240, 255, 0.55);
+		border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
 		box-shadow: 0 0 32px rgba(0, 240, 255, 0.1);
 	}
 

@@ -9,28 +9,47 @@
 	};
 
 	let { project, index = 0 }: Props = $props();
+	let isPriorityImage = $derived(index < 2);
+	let imageFailed = $state(false);
+
+	const getResponsivePreviewSet = (image: string) => {
+		if (!image.endsWith('-preview.jpg')) return undefined;
+
+		const basePath = image.replace('-preview.jpg', '-preview');
+
+		return `${basePath}-480.jpg 480w, ${basePath}-720.jpg 720w, ${image} 960w`;
+	};
+
+	let previewSrcset = $derived(getResponsivePreviewSet(project.image));
 </script>
 
-<article
-	class="project-card group"
-	style:animation-delay={`${index * 120}ms`}
->
+<article class="project-card group" style:animation-delay={`${index * 120}ms`}>
 	<a
 		href={project.liveUrl}
 		target="_blank"
-		rel="noreferrer"
+		rel="noopener noreferrer"
 		class="block"
 		aria-label={`Open ${project.title}`}
 	>
 		<div class="image-wrap">
-			<img
-				src={project.image}
-				alt={`${project.title} preview`}
-				width={project.imageWidth}
-				height={project.imageHeight}
-				loading={index < 2 ? 'eager' : 'lazy'}
-				decoding="async"
-			/>
+			{#if imageFailed}
+				<div class="image-fallback" role="img" aria-label={`${project.title} preview unavailable`}>
+					<span>{project.title}</span>
+				</div>
+			{:else}
+				<img
+					src={project.image}
+					alt={`${project.title} preview`}
+					width={project.imageWidth}
+					height={project.imageHeight}
+					srcset={previewSrcset}
+					sizes="(min-width: 1024px) 520px, (min-width: 768px) 45vw, calc(100vw - 40px)"
+					loading={isPriorityImage ? 'eager' : 'lazy'}
+					fetchpriority={isPriorityImage ? 'high' : 'low'}
+					decoding="async"
+					onerror={() => (imageFailed = true)}
+				/>
+			{/if}
 		</div>
 	</a>
 
@@ -39,14 +58,19 @@
 			<h3 class="text-base md:text-xl">{project.title}</h3>
 
 			<div class="actions">
-				<a href={project.liveUrl} target="_blank" rel="noreferrer" aria-label={`${project.title} live site`}>
+				<a
+					href={project.liveUrl}
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label={`${project.title} live site`}
+				>
 					<ExternalLink size={12} strokeWidth={1.8} />
 				</a>
 
 				<a
 					href={project.githubUrl}
 					target="_blank"
-					rel="noreferrer"
+					rel="noopener noreferrer"
 					aria-label={`${project.title} GitHub repository`}
 				>
 					<Code2 size={12} strokeWidth={1.8} />
@@ -67,10 +91,9 @@
 <style>
 	.project-card {
 		overflow: hidden;
-		border: 1px solid rgba(0, 240, 255, 0.14);
+		border: 1px solid var(--color-border);
 		background:
-			linear-gradient(145deg, rgba(0, 240, 255, 0.075), transparent 36%),
-			var(--color-surface-soft);
+			linear-gradient(145deg, rgba(0, 240, 255, 0.075), transparent 36%), var(--color-surface-soft);
 		opacity: 0;
 		transform: translateY(28px);
 		animation: card-enter 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -82,7 +105,7 @@
 
 	.project-card:hover {
 		transform: translateY(-6px);
-		border-color: rgba(0, 240, 255, 0.55);
+		border-color: color-mix(in srgb, var(--color-primary) 55%, transparent);
 		box-shadow: 0 0 35px rgba(0, 240, 255, 0.12);
 	}
 
@@ -91,21 +114,50 @@
 		display: grid;
 		place-items: center;
 		overflow: hidden;
-		border-bottom: 1px solid rgba(0, 240, 255, 0.08);
+		border-bottom: 1px solid var(--color-border);
 		background:
 			radial-gradient(circle at 50% 100%, rgba(0, 240, 255, 0.18), transparent 45%),
-			linear-gradient(90deg, rgba(0, 240, 255, 0.12), transparent 18%, transparent 82%, rgba(0, 240, 255, 0.1)),
-			#041012;
+			linear-gradient(
+				90deg,
+				rgba(0, 240, 255, 0.12),
+				transparent 18%,
+				transparent 82%,
+				rgba(0, 240, 255, 0.1)
+			),
+			var(--color-field);
 	}
 
-	img {
+	img,
+	.image-fallback {
 		display: block;
 		height: calc(100% - 1rem);
 		width: calc(100% - 1rem);
+	}
+
+	img {
 		object-fit: contain;
 		transition:
 			transform 500ms ease,
 			filter 500ms ease;
+	}
+
+	.image-fallback {
+		display: grid;
+		place-items: center;
+		border: 1px solid var(--color-border);
+		background: color-mix(in srgb, var(--color-surface) 86%, transparent);
+		padding: 1rem;
+		text-align: center;
+	}
+
+	.image-fallback span {
+		font-family: var(--font-mono);
+		font-size: 0.66rem;
+		font-weight: 800;
+		line-height: 1.4;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: var(--color-primary);
 	}
 
 	.project-card:hover img {
@@ -143,7 +195,7 @@
 		height: 1.35rem;
 		width: 1.35rem;
 		place-items: center;
-		color: #cbd5e1;
+		color: var(--color-muted);
 		transition: color 180ms ease;
 	}
 

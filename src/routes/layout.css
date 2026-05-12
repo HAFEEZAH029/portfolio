@@ -12,6 +12,11 @@
 	--color-text: #e5f7f8;
 	--color-muted: #7d8b8d;
 	--color-border: rgba(0, 240, 255, 0.18);
+	--color-primary-contrast: #021013;
+	--color-field: #061012;
+	--color-field-focus: #071416;
+	--color-card-solid: #11131e;
+	--color-danger: #fb7185;
 
 	--font-heading: 'Space Grotesk', sans-serif;
 	--font-body: 'Geist', sans-serif;
@@ -25,6 +30,11 @@ html[data-theme='light'] {
 	--color-text: #071416;
 	--color-muted: #4b6267;
 	--color-border: rgba(0, 116, 130, 0.24);
+	--color-primary-contrast: #001114;
+	--color-field: #e4fbff;
+	--color-field-focus: #f5feff;
+	--color-card-solid: #f8feff;
+	--color-danger: #be123c;
 }
 
 html {
@@ -40,6 +50,15 @@ body {
 
 section {
 	scroll-margin-top: 6rem;
+}
+
+section:not(#top) {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 42rem;
+}
+
+#transmission {
+	contain-intrinsic-size: auto 56rem;
 }
 
 main {

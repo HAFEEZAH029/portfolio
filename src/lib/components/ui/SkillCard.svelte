@@ -9,16 +9,45 @@
 
 	let { skill, index = 0 }: Props = $props();
 	let isOpen = $state(false);
+	let cardElement: HTMLButtonElement;
 	let Icon = $derived(skill.icon);
+
+	function toggleOpen() {
+		isOpen = !isOpen;
+	}
+
+	function closeOpenCard(event: PointerEvent) {
+		if (!isOpen || cardElement?.contains(event.target as Node)) return;
+
+		isOpen = false;
+	}
+
+	function handleKeydown(event: KeyboardEvent) {
+		if (event.key === 'Escape') {
+			isOpen = false;
+			cardElement?.blur();
+		}
+	}
+
+	$effect(() => {
+		document.addEventListener('pointerdown', closeOpenCard);
+		document.addEventListener('keydown', handleKeydown);
+
+		return () => {
+			document.removeEventListener('pointerdown', closeOpenCard);
+			document.removeEventListener('keydown', handleKeydown);
+		};
+	});
 </script>
 
 <button
+	bind:this={cardElement}
 	type="button"
 	class:open={isOpen}
 	class="skill-card"
 	aria-expanded={isOpen}
 	aria-label={`${skill.name} skill details`}
-	onclick={() => (isOpen = !isOpen)}
+	onclick={toggleOpen}
 >
 	<span class="skill-main">
 		<span class="icon-box">
@@ -44,10 +73,9 @@
 		min-height: 6rem;
 		width: 100%;
 		overflow: hidden;
-		border: 1px solid rgba(0, 240, 255, 0.18);
+		border: 1px solid var(--color-border);
 		background:
-			linear-gradient(145deg, rgba(0, 240, 255, 0.08), transparent 36%),
-			var(--color-surface-soft);
+			linear-gradient(145deg, rgba(0, 240, 255, 0.08), transparent 36%), var(--color-surface-soft);
 		color: var(--color-text);
 		cursor: pointer;
 		transition:
@@ -62,7 +90,7 @@
 	.skill-card.open {
 		min-height: 11.5rem;
 		transform: translateY(-4px);
-		border-color: rgba(0, 240, 255, 0.58);
+		border-color: color-mix(in srgb, var(--color-primary) 58%, transparent);
 		box-shadow: 0 0 32px rgba(0, 240, 255, 0.1);
 	}
 
@@ -91,7 +119,7 @@
 		font-size: 0.72rem;
 		font-weight: 600;
 		letter-spacing: 0.03em;
-		color: #dceff0;
+		color: var(--color-text);
 	}
 
 	.mobile-arrow {
