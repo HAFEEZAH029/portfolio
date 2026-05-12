@@ -6,7 +6,7 @@
 		},
 		{
 			label: 'LinkedIn',
-			href: 'https://www.linkedin.com/feed/'
+			href: 'https://www.linkedin.com/'
 		}
 	];
 </script>
@@ -18,7 +18,7 @@
 
 			<nav aria-label="Social links">
 				{#each links as link}
-					<a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+					<a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
 				{/each}
 			</nav>
 		</div>
@@ -27,7 +27,7 @@
 
 <style>
 	.site-footer {
-		border-top: 1px solid rgba(0, 240, 255, 0.08);
+		border-top: 1px solid var(--color-border);
 		padding: 1.25rem 1.25rem 6.75rem;
 		background: var(--color-bg);
 	}
