@@ -8,7 +8,7 @@ The portfolio was designed to feel less like a static personal website and more 
 
 ## Live Demo
 
-Live URL: https://www.khayport.netlify.app
+Live URL: https://khayport.netlify.app
 `
 
 ## Repository
@@ -387,6 +387,12 @@ loading="lazy"
 ### Optimized Asset Loading
 
 Critical project previews use eager loading while secondary assets defer loading.
+
+---
+
+### SEO Optimization
+
+Added title, description, canonical, Open Graph, Twitter metadata, robots, and theme color to boost SEO score
 
 ---
 
