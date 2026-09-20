@@ -25,5 +25,5 @@ export const navLinks: NavLink[] = [
 		label: 'Journey',
 		href: '#journey',
 		icon: Route
-	}
-];
+	},
+]
