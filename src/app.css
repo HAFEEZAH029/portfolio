@@ -1,24 +1,24 @@
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  min-height: 100vh;
-  background: #020b0c;
-  color: #e5f7f8;
+	min-height: 100vh;
+	background: var(--color-bg);
+	color: var(--color-text);
 }
 
 section {
-  scroll-margin-top: 6rem;
+	scroll-margin-top: 6rem;
 }
 
 main {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
+	padding-top: 4rem;
+	padding-bottom: 6rem;
 }
 
 @media (min-width: 1024px) {
-  main {
-    padding-bottom: 0;
-  }
+	main {
+		padding-bottom: 0;
+	}
 }
