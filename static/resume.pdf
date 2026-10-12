@@ -1,0 +1,75 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 4435 >>
+stream
+BT /F2 28 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 742.00 Tm (HAFEEZAH) Tj ET
+BT /F2 13 Tf 0.000 0.620 0.680 rg 1 0 0 1 54.00 718.00 Tm (Frontend Engineer & Visual Designer) Tj ET
+BT /F1 9 Tf 0.300 0.390 0.420 rg 1 0 0 1 54.00 699.00 Tm (GitHub: github.com/HAFEEZAH029  |  LinkedIn: linkedin.com/feed  |  Portfolio contact form) Tj ET
+0.000 0.620 0.680 RG 1.00 w 54.00 682.00 m 558.00 682.00 l S
+BT /F2 11 Tf 0.000 0.620 0.680 rg 1 0 0 1 54.00 654.00 Tm (PROFILE) Tj ET
+BT /F1 9.6 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 636.00 Tm (Frontend engineer focused on immersive digital interfaces, responsive systems, and polished user) Tj ET
+BT /F1 9.6 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 622.00 Tm (experiences. Combines component-driven engineering with visual design instincts to build products that) Tj ET
+BT /F1 9.6 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 608.00 Tm (feel fast, accessible, and refined.) Tj ET
+BT /F2 11 Tf 0.000 0.620 0.680 rg 1 0 0 1 54.00 584.00 Tm (CORE ARSENAL) Tj ET
+BT /F1 9.4 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 566.00 Tm (- React: component-driven interfaces, hooks, reusable UI patterns) Tj ET
+BT /F1 9.4 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 553.00 Tm (- Next.js: app router architecture, server actions workflow, production routing) Tj ET
+BT /F1 9.4 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 540.00 Tm (- TypeScript: safer props, predictable data models, fewer runtime bugs) Tj ET
+BT /F1 9.4 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 527.00 Tm (- Tailwind CSS: responsive design systems, utility-first styling, fast UI iteration) Tj ET
+BT /F1 9.4 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 514.00 Tm (- Framer Motion: smooth transitions, staggered reveals, interaction micro-motion) Tj ET
+BT /F2 11 Tf 0.000 0.620 0.680 rg 1 0 0 1 54.00 491.00 Tm (FEATURED PROJECTS) Tj ET
+BT /F2 9.8 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 473.00 Tm (Audiophile e-commerce app) Tj ET
+BT /F1 8.2 Tf 0.300 0.390 0.420 rg 1 0 0 1 360.00 473.00 Tm (Next, Redux, Prisma) Tj ET
+BT /F1 9 Tf 0.040 0.080 0.100 rg 1 0 0 1 64.00 460.00 Tm (Premium shopping experience for high-fidelity audio gear with responsive layouts, cart management,) Tj ET
+BT /F1 9 Tf 0.040 0.080 0.100 rg 1 0 0 1 64.00 448.00 Tm (and checkout flows.) Tj ET
+BT /F2 9.8 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 431.00 Tm (Invoice App) Tj ET
+BT /F1 8.2 Tf 0.300 0.390 0.420 rg 1 0 0 1 360.00 431.00 Tm (TypeScript, Next.js, Storage) Tj ET
+BT /F1 9 Tf 0.040 0.080 0.100 rg 1 0 0 1 64.00 418.00 Tm (Invoice management tool for freelancers with real-time status tracking, multi-screen support, and) Tj ET
+BT /F1 9 Tf 0.040 0.080 0.100 rg 1 0 0 1 64.00 406.00 Tm (modal interactions.) Tj ET
+BT /F2 9.8 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 389.00 Tm (Habit Tracker) Tj ET
+BT /F1 8.2 Tf 0.300 0.390 0.420 rg 1 0 0 1 360.00 389.00 Tm (NextJS, Tailwind, TypeScript, Playwright) Tj ET
+BT /F1 9 Tf 0.040 0.080 0.100 rg 1 0 0 1 64.00 376.00 Tm (Mobile-first PWA for creating daily habits, marking completion, and tracking streaks over time.) Tj ET
+BT /F2 9.8 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 359.00 Tm (Sanctuary) Tj ET
+BT /F1 8.2 Tf 0.300 0.390 0.420 rg 1 0 0 1 360.00 359.00 Tm (React, Tanstack Query, Tailwind, TypeScript, Axios) Tj ET
+BT /F1 9 Tf 0.040 0.080 0.100 rg 1 0 0 1 64.00 346.00 Tm (End-to-end messaging platform for sending and receiving decryptable messages.) Tj ET
+BT /F2 11 Tf 0.000 0.620 0.680 rg 1 0 0 1 54.00 327.00 Tm (CLIENT JOURNEY) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 309.00 Tm (- Consultation: Align goals and project needs) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 309.00 309.00 Tm (- Proposal: Scope, timeline, and deliverables) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 295.00 Tm (- Onboarding: Assets, access, and direction) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 309.00 295.00 Tm (- Prototyping: Wireframes into interactive flow) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 281.00 Tm (- Development: Build responsive frontend systems) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 309.00 281.00 Tm (- Testing: Polish, QA, and accessibility) Tj ET
+BT /F1 8.9 Tf 0.040 0.080 0.100 rg 1 0 0 1 54.00 267.00 Tm (- Launch: Deploy, handoff, and support) Tj ET
+0.780 0.860 0.880 RG 0.60 w 54.00 52.00 m 558.00 52.00 l S
+BT /F1 8 Tf 0.300 0.390 0.420 rg 1 0 0 1 54.00 34.00 Tm (Selected work: audiomerce.netlify.app | invoicemngt.netlify.app | routinestracker.netlify.app | sancsecure.netlify.app) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000327 00000 n 
+0000000402 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4889
+%%EOF
